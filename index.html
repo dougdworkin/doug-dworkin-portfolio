@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<!-- set up scaling for mobile -->
+	<meta name="viewport" content ="width=device-width, initial-scale=1">
+
+<!-- Add media query support for IE8 and under. Must place media queries in external stylesheet -->
+	<script src="./js/respond.min.js"></script>
+
+<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+        
+    
+<!--  Checkbox Hack Support for IE8 -->        
+        
+    <!--[if lt IE 9]>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js">      </script>
+    <![endif]-->
+        
+    <!--[if IE 8]>
+    <script src="./js/checkbox.js"></script>
+    <![endif]-->
+        
+    <!--[if IE 6]>
+    <script src="./js/selectivizr-min.js"></script>
+    <![endif]-->
+
+
+<!-- Add Lato 300 light, 400 med, 700 bold -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<!-- normalize reset -->	
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+	<link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+
+</head>
+<body>
+
+<nav>
+	<div class="navContainer content">
+
+<!-- Checkbox Hack markup -->
+       <input type="checkbox" id="toggle" />
+       <label for="toggle" onclick>Menu</label>
+<!-- /Checkbox Hack markup -->
+
+		<div class="navLinks">
+			<ul>
+				<li>
+					<a href="#">Portfolio</a>
+				</li>
+				
+				<li>
+					<a href="#">About Me</a>
+				</li>
+				
+				<li>
+					<a href="#">Get in Touch</a>
+				</li>
+			</ul>
+		</div>
+	</div>	
+</nav>
+
+
+<head>
+	<div class="headerContainer content">
+		<div class="headerText">
+			<h1>Hi, I'm Doug</h1>
+			<h2>Front End Designer/Developer &amp; Illustrator</h2>
+		</div>
+	</div>
+
+</head>
+
+<section clsss="portfolio content">
+	
+	<h2>Portfolio</h2>
+	
+		<article class="project">
+			<h3>Project One</h3>
+				<a href="#">
+					<figure>
+						<img src="">
+					</figure>
+				</a>		
+		</article>
+
+		<article class="project">
+			<h3>Project One</h3>
+				<a href="#">
+					<figure>
+						<img src="">
+					</figure>
+				</a>		
+		</article>
+
+		<article class="project">
+			<h3>Project One</h3>
+				<a href="#">
+					<figure>
+						<img src="">
+					</figure>
+				</a>		
+		</article>
+
+		<article class="project">
+			<h3>Project One</h3>
+				<a href="#">
+					<figure>
+						<img src="">
+					</figure>
+				</a>		
+		</article>
+	
+</section> <!-- / portfolio section -->
+
+<section class="aboutMe content">
+
+	<h2>About Me</h2>
+
+		<article class="aboutMe">
+			<h3>Who I Am</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem doloremque reprehenderit necessitatibus fuga, harum, quas eius natus optio ipsam, dicta tempora nisi aut temporibus recusandae nesciunt iste? Pariatur, culpa, amet.</p>
+		</article>
+
+		<article class="aboutMe">
+			<h3>What I Do</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem doloremque reprehenderit necessitatibus fuga, harum, quas eius natus optio ipsam, dicta tempora nisi aut temporibus recusandae nesciunt iste? Pariatur, culpa, amet.</p>
+		</article>
+
+		<article class="aboutMe">
+			<h3>Where I'm From</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem doloremque reprehenderit necessitatibus fuga, harum, quas eius natus optio ipsam, dicta tempora nisi aut temporibus recusandae nesciunt iste? Pariatur, culpa, amet.</p>
+		</article>
+
+
+
+</section>
+
+<section class="contactMe">
+
+	<div class="contactText content">
+		<h2>Get In Touch</h2>
+		<p><em>I’d love to hear from you!</em> If you would like to contact me, send me a message below or email me at <a href="mailto:doug@dougdworkin.com">doug@dougdworkin.com</a>.</p>
+	</div>
+
+	<form id="contactForm" method="post" action="mail.php">
+		<fieldset class="content">
+
+			<label for="name">Your Name</label>
+			<input type="text" id="name"  name="name">
+
+			<label for="email">Your email</label>
+			<input type="email" id="email"  name="email">
+
+			<label for="message">Say Hello</label>
+			<textarea id="message"  name="message"></textarea>
+
+			<input class="send" type="submit" name="submit" value="Send">
+
+		</fieldset>
+
+	</form>
+
+
+</section>
+	
+</body>
+</html>

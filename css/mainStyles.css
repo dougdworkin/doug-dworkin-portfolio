@@ -1,3 +1,50 @@
+/* Browser resets */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
 /* set up Boxsizing: BroderBox */
 
 html {
@@ -12,8 +59,10 @@ html {
   box-sizing: inherit;
   }
 
-/* global styles */
 
+/********************************************
+	 Global Page Styles 
+********************************************/
 
 html {
 	height: 100%;
@@ -37,17 +86,79 @@ body {
 		}
 }
 
-/* Navigation Styles */
+section.content, header  {
+	padding-bottom: 1.5em;
+	line-height: 1.25
+}
+
+.content, .headerContainer {
+	padding-left:3%;
+	padding-right: 3%;
+	max-width: 60em; /* 960px */
+	margin: 0 auto;
+
+}
+
+
+
+
+
+img {
+	max-width:100%;
+}
+
+
+
+/********************************************
+	 Global Header Styles 
+********************************************/
+
+h1 {
+	font-weight: 300;
+	font-size: 2em;
+	padding-bottom: .25em
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 1.25em;
+}
+
+.content h2 {
+	font-weight: 700;
+	font-size: 1.5em;
+	padding-top: 1em;
+	color: #2e62b8;
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 1.05em;
+	color: #bd5102;
+
+}
+
+
+
+/* ******************************************
+	Navigation  Section General Styles 
+****************************************** */
+
+nav .logo {
+	float:left;
+	margin-left: 3%;
+	color: #555;
+}
 
 nav {
-	padding: .65em 0;
+	padding: .65em 0 0 0;
 }
 
 nav ul {
 		    list-style: none;
 		    padding: 0;
 		    border-bottom: 1px solid #eee;
-		    margin: .65em 0 .39em;
+		    margin: .65em 0 0 0;
 		}
 
 .navLinks li {
@@ -80,6 +191,7 @@ nav input[type=checkbox] {
 	
 nav label { 
 		    display: block;
+		    margin-bottom: .35em;
 		    background: url("../img/icon-menu.png") no-repeat right center;
 		    text-indent: -999em;
 		    cursor: pointer;
@@ -93,19 +205,80 @@ nav input[type=checkbox]:checked ~ .navLinks  {
 		    height: auto;
 		    overflow: hidden;  
 		}
-		
 
 
+/* ******************************************
+	Header Section General Styles 
+****************************************** */
 
-section.contactMe {
-	background-color: #26282c;
+header  {
+	width: 100%;
+	background-color: #002157;
+	color: #fff;
+	padding: .75em 3%;
+	text-align: center;
+} 
 
+
+/* ******************************************
+	Portfolio Section General Styles
+****************************************** */
+
+section.portfolio article {
+	padding:.5em;
+	margin-top: 1em;
+	/* -moz-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .05 );
+	-webkit-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .05 );
+	box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .05 ); */
+	border: solid 1px #b0dbff;
 }
 
 
 
+/* ******************************************
+	About Me Styles 
+****************************************** */
 
-  /* Form Styles */
+
+section.aboutMe h3 {
+	border-bottom: solid 1px #e4963b;
+	padding-top: .75em
+}
+		
+
+
+/* ******************************************
+	Footer General Styles 
+****************************************** */
+
+section.contactMe {
+	background-color: #26282c;
+	color: #fff;
+}
+
+section.contactMe .contactText.content h2 {
+	font-weight: 400;
+	color: #e4bd38;
+}
+
+section.contactMe  p {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+
+section.contactMe  a {
+	color: #ffa35f;
+}
+
+section.contactMe  a:hover {
+	color: #e4bd38;
+}
+
+
+/* ******************************************
+	Form General Styles
+****************************************** */
 
   form {
   	padding: 0 1%;
@@ -118,7 +291,7 @@ section.contactMe {
   label {
   	display: block;
   	margin-top: .25em;
-  	font-size: 1.5em;
+  	font-size: 1.25em;
   	color: #fff;
   	font-weight: 300;	
   }
@@ -187,3 +360,47 @@ section.contactMe {
  }
 
 
+/* ******************************************
+	Media Queries for screen wider than 28.75em (460px)
+****************************************** */
+
+@media screen and (min-width: 28.75em) {
+
+
+nav div.navContainer label {
+ 	display: none;
+}
+		
+nav div.navContainer {
+	padding: 0;
+}
+
+nav div.navLinks {
+	height: auto;
+}
+		
+nav div.navLinks ul {
+	border: 0;
+	margin: 0;
+	
+
+}
+
+nav div.navLinks li {
+    display: inline;
+    border: 0;
+    float: right;
+}
+
+nav div.navLinks a {
+     display: inline-block;
+     padding-left:.75em;
+     padding-right: .75em;
+
+}
+
+nav .logo {
+	margin-top: 1em;
+}
+		
+			

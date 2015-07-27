@@ -30,19 +30,34 @@
     <![endif]-->
 
 
+<!-- picturefill to allow image swapping with media queries-->
+
+ <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+ </script>
+
+<script src="js/picturefill.min.js" async></script>
+
 <!-- Add Lato 300 light, 400 med, 700 bold -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-<!-- normalize reset -->	
+<!-- normalize stylesheet to fix browser issues -->	
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 
 	<link rel="stylesheet" type="text/css" href="css/mainStyles.css">
+
+
 
 </head>
 <body>
 
 <nav>
 	<div class="navContainer content">
+
+	<div class="logo">
+		<p>Doug Dworkin</p>
+	</div>	
 
 <!-- Checkbox Hack markup -->
        <input type="checkbox" id="toggle" />
@@ -68,56 +83,52 @@
 </nav>
 
 
-<head>
-	<div class="headerContainer content">
+<header>
+	<div class="headerContainer">
 		<div class="headerText">
 			<h1>Hi, I'm Doug</h1>
 			<h2>Front End Designer/Developer &amp; Illustrator</h2>
 		</div>
 	</div>
 
-</head>
+</header>
 
-<section clsss="portfolio content">
+<section class="portfolio content">
 	
 	<h2>Portfolio</h2>
 	
 		<article class="project">
-			<h3>Project One</h3>
+			<h3>Healthy Coloring Non-Profit</h3>
+			<p>Website &amp; identity package
 				<a href="#">
 					<figure>
-						<img src="">
+						<img src="img/placeHolderImg.png" alt="Healthly Coloring Examples">
+					</figure>
+				</a>	
+		</article>
+
+	
+		<article class="project">
+			<h3>Illustrations</h3>
+			<p>Specializing in whimsical imagery</p>
+				<a href="#">
+					<figure>
+						<img src="img/placeHolderImg.png" alt="Illustration Examples">
 					</figure>
 				</a>		
 		</article>
 
 		<article class="project">
-			<h3>Project One</h3>
+			<h3>Kaiser Permanente Branded Websites</h3>
+			<p>Microsites using corporate brand guidlines</p>
 				<a href="#">
 					<figure>
-						<img src="">
-					</figure>
-				</a>		
-		</article>
-
-		<article class="project">
-			<h3>Project One</h3>
-				<a href="#">
-					<figure>
-						<img src="">
-					</figure>
-				</a>		
-		</article>
-
-		<article class="project">
-			<h3>Project One</h3>
-				<a href="#">
-					<figure>
-						<img src="">
+						<img src="img/placeHolderImg.png" alt="Branded Corporate Microsite Examples">
 					</figure>
 				</a>		
 		</article>
 	
+
 </section> <!-- / portfolio section -->
 
 <section class="aboutMe content">
@@ -143,11 +154,11 @@
 
 </section>
 
-<section class="contactMe">
+<section class="contactMe content">
 
 	<div class="contactText content">
 		<h2>Get In Touch</h2>
-		<p><em>I’d love to hear from you!</em> If you would like to contact me, send me a message below or email me at <a href="mailto:doug@dougdworkin.com">doug@dougdworkin.com</a>.</p>
+		<p><em>I’d love to hear from you!</em> Send me a message below or email me at <a href="mailto:doug@dougdworkin.com">doug@dougdworkin.com</a>.</p>
 	</div>
 
 	<form id="contactForm" method="post" action="mail.php">

@@ -94,13 +94,10 @@ section.content, header  {
 .content, .headerContainer {
 	padding-left:3%;
 	padding-right: 3%;
-	max-width: 60em; /* 960px */
+	max-width: 80em; /* 960px */
 	margin: 0 auto;
 
 }
-
-
-
 
 
 img, picture {
@@ -155,22 +152,22 @@ nav {
 }
 
 nav ul {
-		    list-style: none;
-		    padding: 0;
-		    border-bottom: 1px solid #eee;
-		    margin: .65em 0 0 0;
-		}
+	list-style: none;
+	padding: 0;
+	border-bottom: 1px solid #eee;
+	margin: .65em 0 0 0;
+}
 
 .navLinks li {
-		   border-top: 1px solid #eee;
+		border-top: 1px solid #eee;
 		}
 	
 .navLinks a {
-		   display: block;
-		   font-size: 1.063em;
-		   color: #333;
-		   text-decoration: none;
-		   padding: .975em 1.3em; 
+   display: block;
+   font-size: 1.063em;
+   color: #333;
+   text-decoration: none;
+   padding: .975em 1.3em; 
 		}
 	
 .navLinks a:hover {
@@ -211,13 +208,31 @@ nav input[type=checkbox]:checked ~ .navLinks  {
 	Header Section General Styles 
 ****************************************** */
 
-header  {
+header.mainHeader  {
 	width: 100%;
 	background-color: #002157;
 	color: #fff;
 	padding: .75em 3%;
 	text-align: center;
 } 
+
+/* ******************************************
+	Clearfix 
+****************************************** */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+ 
+.clearfix:after {
+  clear: both;
+}
+ 
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
 
 
 /* ******************************************
@@ -231,8 +246,26 @@ section.portfolio article {
 	-webkit-box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .05 );
 	box-shadow: 0 0 .325em .13em rgba( 0, 0, 0, .05 ); */
 	border: solid 1px #b0dbff;
+	text-align: center;
 }
 
+
+
+section.portfolio p.learnMore a {
+	display: block;
+	padding: .75em 1em;
+	background-color: #bd5102;
+	color: #fff;
+	border-radius: 7px;
+	margin: auto;
+	text-align: center;
+	max-width: 300px;
+}
+
+section.portfolio p.learnMore a:hover {
+	background-color: #bd3202;
+
+}
 
 
 /* ******************************************
@@ -244,6 +277,11 @@ section.aboutMe h3 {
 	border-bottom: solid 1px #e4963b;
 	padding-top: .75em
 }
+
+section.aboutMe article {
+	margin-bottom: 2em;
+} 
+
 		
 
 
@@ -404,3 +442,81 @@ nav .logo {
 }
 		
 			
+/* ******************************************
+	Media Queries for screen wider than 43.75em (700px)
+****************************************** */
+
+@media screen and (min-width: 43.75em) {
+
+
+header.mainHeader  {
+	padding: 4em;
+}
+
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+.content h2 {
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.content, .headerContainer {
+	padding-left:7%;
+	padding-right: 7%;
+}
+
+section.portfolio h2, section.aboutMe h2 {
+	margin:1em 0 .5em 0;
+}
+
+section.portfolio header {
+	height: 5.25em;
+
+} 
+
+section.aboutMe, section.contactMe {
+	clear: both;
+}
+
+section.portfolio article,
+section.aboutMe article {
+	float: left;
+}
+
+section.portfolio article {
+	width: 31%;
+} 
+
+section.aboutMe article {
+	width: 45%;
+} 
+
+
+section.portfolio article ~ article {
+	margin-left: 3.5%;
+} 
+
+section.aboutMe article ~ article {
+	margin-left: 10%;
+} 
+
+
+section.aboutMe div {
+	background-image: url("img/placeHolderImg.png");
+	background-repeat: none;
+}
+
+section.aboutMe {
+	padding-bottom:1.5em;
+}
+
+
+
+

@@ -47,9 +47,8 @@
 
 	<link rel="stylesheet" type="text/css" href="css/mainStyles.css">
 
-
-
 </head>
+
 <body>
 
 <nav>
@@ -67,33 +66,35 @@
 		<div class="navLinks">
 			<ul>
 				<li>
-					<a href="#">Portfolio</a>
+					<a href="#portfolio">Portfolio</a>
 				</li>
 				
 				<li>
-					<a href="#">About Me</a>
+					<a href="#about">About Me</a>
 				</li>
 				
 				<li>
-					<a href="#">Get in Touch</a>
+					<a href="#contact">Get in Touch</a>
 				</li>
 			</ul>
-		</div>
-	</div>	
+		</div> <!-- nav links -->
+	</div>	<!-- navContainer -->
 </nav>
 
 
 <header class="mainHeader">
+
 	<div class="headerContainer">
 		<div class="headerText">
 			<h1>Hi, I'm Doug</h1>
 			<h2>Front End Designer/Developer &amp; Illustrator</h2>
 		</div>
-	</div>
+	</div> <!-- headerContainer -->
+</nav>
 
 </header>
 
-<section class="portfolio content">
+<section id="portfolio" class="portfolio content">
 	
 	<h2>Portfolio</h2>
 	
@@ -116,7 +117,7 @@
 		<article class="project">
 			<header>
 				<h3>Corporate Branded Websites</h3>
-				<p>Designed with brand standards &amp; guidlines.</p>
+				<p>Designed within brand standards &amp; guidlines.</p>
 			</header>	
 
 				<img src="img/placeHolderImg.png" alt="Corporate Branded Websites Examples">
@@ -141,60 +142,88 @@
 					<p class="learnMore">
 						<a>Learn More</a>
 					</p>
-				</div>		
-									
+				</div>
 		</article>
 
 
 </section> <!-- / portfolio section -->
 
-<section class="aboutMe content clearfix">
+<section id="about" class="aboutMe content clearfix">
 
 	<h2>About Me</h2>
 
 		<article class="aboutMe">
 			<h3>Who I Am</h3>
-			<div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem doloremque reprehenderit necessitatibus fuga, harum, quas eius natus optio ipsam, dicta tempora nisi aut temporibus recusandae nesciunt iste? Pariatur, culpa, amet.</p>
-			</div>	
 		</article>
 
 		<article class="aboutMe">
 			<h3>What I Do</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem doloremque reprehenderit necessitatibus fuga, harum, quas eius natus optio ipsam, dicta tempora nisi aut temporibus recusandae nesciunt iste? Pariatur, culpa, amet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem doloremque reprehenderit necessitatibus fuga, harum, quas eius natus optio ipsam, dicta tempora nisi aut temporibus recusandae nesciunt iste? Pariatur, culpa, amet.</p>
 		</article>
 
+</section> <!-- / aboutMe section -->
 
 
-</section>
+<footer>
 
-<section class="contactMe content clearfix">
+	<section id="contact" class="contactMe content clearfix">
 
-	<div class="contactText content">
-		<h2>Get In Touch</h2>
-		<p><em>I’d love to hear from you!</em> Send me a message below or email me at <a href="mailto:doug@dougdworkin.com">doug@dougdworkin.com</a>.</p>
-	</div>
+		<div class="contactText content">
+			<h2>Get In Touch</h2>
+			<p><em>I’d love to hear from you!</em> Send me a message below or email me at <a href="mailto:doug@dougdworkin.com">doug@dougdworkin.com</a>.</p>
+		</div>
 
-	<form id="contactForm" method="post" action="mail.php">
-		<fieldset class="content">
+		<form id="contactForm" method="post" action="mail.php">
+			<fieldset class="content">
 
-			<label for="name">Your Name</label>
-			<input type="text" id="name"  name="name">
+				<div class="name">	
+					<label for="name">Your Name</label>
+					<input type="text" id="name"  name="name">
+				</div>	
 
-			<label for="email">Your email</label>
-			<input type="email" id="email"  name="email">
+				<div class="email">
+					<label for="email">Your email</label>
+					<input type="email" id="email"  name="email">
+				</div>	
 
-			<label for="message">Say Hello</label>
-			<textarea id="message"  name="message"></textarea>
+				<div class="message">
+					<label for="message">Say Hello</label>
+					<textarea id="message"  name="message"></textarea>
+				</div>	
 
-			<input class="send" type="submit" name="submit" value="Send">
+				<input class="send" type="submit" name="submit" value="Send">
 
-		</fieldset>
+			</fieldset>
 
-	</form>
+		</form>
 
+	</section> <!-- ContactMe section -->
 
-</section>
+	<div class=" copywrite content">
+		<p>&copy;2015 Doug Dworkin all rights reserved.</p>
+	</div>	
+
+</footer>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('a[href^="#"]').on('click',function (e) {
+		    e.preventDefault();
+
+		    var target = this.hash;
+		    var $target = $(target);
+
+		    $('html, body').stop().animate({
+		        'scrollTop': $target.offset().top
+		    }, 900, 'swing', function () {
+		        window.location.hash = target;
+		    });
+		});
+	});
+</script>
 	
 </body>
 </html>

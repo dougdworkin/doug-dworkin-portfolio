@@ -45,7 +45,9 @@ table {
 
 
 
-/* set up Boxsizing: BroderBox */
+/* ******************************************
+	Set up Boxsizing: BroderBox 
+****************************************** */
 
 html {
   -webkit-box-sizing: border-box;
@@ -58,6 +60,25 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
   }
+
+
+/* ******************************************
+	Clearfix 
+****************************************** */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+ 
+.clearfix:after {
+  clear: both;
+}
+ 
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
 
 
 /********************************************
@@ -148,7 +169,7 @@ nav .logo {
 }
 
 nav {
-	padding: .65em 0 0 0;
+	padding: 0;
 }
 
 nav ul {
@@ -171,7 +192,8 @@ nav ul {
 		}
 	
 .navLinks a:hover {
-		   background: #f8f8f8;
+		   background: #fddacd;
+		   color: #fa4100;
 		}
 
 
@@ -216,23 +238,6 @@ header.mainHeader  {
 	text-align: center;
 } 
 
-/* ******************************************
-	Clearfix 
-****************************************** */
-
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
- 
-.clearfix:after {
-  clear: both;
-}
- 
-.clearfix {
-  zoom: 1; /* ie 6/7 */
-}
 
 
 /* ******************************************
@@ -289,9 +294,10 @@ section.aboutMe article {
 	Footer General Styles 
 ****************************************** */
 
-section.contactMe {
+footer {
 	background-color: #26282c;
 	color: #fff;
+	width: 100%;
 }
 
 section.contactMe .contactText.content h2 {
@@ -311,6 +317,15 @@ section.contactMe  a {
 
 section.contactMe  a:hover {
 	color: #e4bd38;
+}
+
+footer .copywrite {
+	color: #777;
+	font-size: 1em;
+	text-align: center;
+	padding: 1em;
+	margin-top: 1em;
+	border-top: solid 1px #777;
 }
 
 
@@ -353,7 +368,7 @@ section.contactMe  a:hover {
 
 }
  textarea {
- 	height: 6em;
+ 	height: 6.5em;
  }
 
 
@@ -420,6 +435,7 @@ nav div.navLinks {
 nav div.navLinks ul {
 	border: 0;
 	margin: 0;
+	float: right;
 	
 
 }
@@ -427,7 +443,7 @@ nav div.navLinks ul {
 nav div.navLinks li {
     display: inline;
     border: 0;
-    float: right;
+    float: left;
 }
 
 nav div.navLinks a {
@@ -518,5 +534,41 @@ section.aboutMe {
 }
 
 
+.name, .email {
+    float: left;
+    width: 50%;
+ }
+    
+.name {
+    padding-right: .65em;
+ }
+    
+.email {
+	padding-left: .65em;
+}
 
 
+/* ******************************************
+	Media Queries for screen wider than 60em (960px)
+****************************************** */
+	
+@media screen and (min-width: 60em) {
+
+
+
+.name, .email {
+    padding-right: 1.3em;
+    padding-left: 0;
+    clear: both;
+ }
+
+.message textarea {
+    width: 50%;
+}
+
+.send {
+    width: 25%;
+    margin-left: 50%;
+ }
+
+}
